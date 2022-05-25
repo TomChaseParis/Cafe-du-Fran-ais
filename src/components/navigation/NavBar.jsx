@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../../assets/img/logo.webp';
+// Importation des pages d'accueil
 
 const NavBar = () => {
 
@@ -14,28 +15,40 @@ const NavBar = () => {
     <div className='navbar'>
       <img src={Logo} alt="logo" />
       <h3 className='logo-title'>Au café du Français</h3>
-      <ul className="navbar__list">
+      <ul className={isMobile ? "navbar__list__mobile" : "navbar__list"}
+      onClick={() => setIsMobile(false)}
+      >
         <Link to="/" className='home'>
-          <li>Accueil</li>
+          <li>
+            <a href="/accueil">Accueil</a>
+          </li>
         </Link>
         <Link to="/contact" className='contact'>
-          <li>Contact</li>
+          <li>
+            <a href="">Contact</a>
+          </li>
         </Link>
-        <Link to="/home" className='home'>
+        <Link to="/accueil" className='accueil'>
           <li>Français</li>
         </Link>
-        <Link to="/homenglish" className='home__english'>
-          <li>English</li>
+        <Link to="/home" className='home'>
+          <li>
+            <a href="">English</a>
+            </li>
         </Link>
-        <Link to="/homedeutsch" className='home__deutsch'>
-          <li>Deutsch</li>
+        <Link to="/startseite" className='startseite'>
+          <li>
+            <a href="">Deutsch</a>
+          </li>
         </Link>
-        <Link to="/homeitalia" className='home__italia'>
+        <Link to="/accoglienza" className='accoglienza'>
           <li>Italiano</li>
         </Link>
       </ul>
-        <button className='mobile-menu-icon'>
-          
+        <button className='mobile-menu-icon'
+        onClick={() => setIsMobile(!isMobile)}
+        >
+          {isMobile ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
         </button>
     </div>
   );

@@ -3,10 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import NavBar from './components/navigation/NavBar';
 import Contact from './components/pages/contact/Contact';
-import Home from './components/pages/home/Home';
-import HomeEnglish from './components/pages/home/HomeEnglish';
-import HomeDeutsch from './components/pages/home/HomeDeutsch';
-import HomeItalia from './components/pages/home/HomeItalia';
+
+/* Importation des pages d'accueil */
+import Accueil from './components/pages/français/Accueil';
+import Home from './components/pages/english/Home';
+import StartSeite from './components/pages/deutsch/StartSeite';
+import Accoglienza from './components/pages/italiano/Accoglienza';
+
+
+
 
 function App() {
   return (
@@ -15,23 +20,23 @@ function App() {
         <NavBar />
 
         <Switch>
-          <Route path="/" component={Home} exact>
-            <Home />
+          <Route path="/" component={Accueil} exact>
+            <Accueil />
           </Route>
           <Route path="/contact" component={Contact} exact>
             <Contact />
           </Route>
-          <Route path="/" component={Home} exact>
+          <Route path="/" component={Accueil} exact>
+            <Accueil />
+          </Route>
+          <Route path="/english" component={Home} exact>
             <Home />
           </Route>
-          <Route path="/homeenglish" component={HomeEnglish} exact>
-            <HomeEnglish />
+          <Route path="/startseite" component={StartSeite} exact>
+            <StartSeite />
           </Route>
-          <Route path="/homedeutsch" component={HomeDeutsch} exact>
-            <HomeDeutsch />
-          </Route>
-          <Route path="/homeitalia" component={HomeItalia} exact>
-            <HomeItalia />
+          <Route path="/accoglienza" component={Accoglienza} exact>
+            <Accoglienza />
           </Route>
         </Switch>
       </Router>

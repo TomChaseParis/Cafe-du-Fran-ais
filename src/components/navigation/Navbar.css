@@ -14,23 +14,16 @@ img {
 
 }
 
-
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #dfe0e1;
   color: black;
 }
 
 .logo-title {
-  margin-right: 5rem;
   font-size: 20px;
   font-weight: 300;
-}
-
-img {
-  margin-left: 1rem;
 }
 
 .navbar__list {
@@ -40,15 +33,70 @@ img {
   width: 75%;
 }
 
-.home,
+.accueil,
 .contact,
-.home__english,
-.home__deutsch,
-.home__italia {
+.home,
+.startseite,
+.accoglienza {
   text-decoration: none;
   color: black;
   font-size: 16px;
   padding: 30px 20px;
   margin: 0 10px;
   cursor: pointer;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+/* *************** RESPONSIVE **************** */
+
+@media screen and (max-width: 780px) {
+
+  .navbar {
+    padding: 20px 10px;
+  }
+
+
+  .logo {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 25px
+  }
+
+  .navbar__list {
+    display: none;
+  }
+
+  .navbar__list__mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: #dfe0e1;
+    width: 100%;
+  }
+
+  .accueil,
+  .contact,
+  .home,
+  .startseite,
+  .accoglienza {
+    color: black;
+    text-align: center;
+    width: 100%;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    background-color: #dfe0e1;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+  }
 }
