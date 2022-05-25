@@ -10,15 +10,11 @@ import Home from './components/pages/english/Home';
 import StartSeite from './components/pages/deutsch/StartSeite';
 import Accoglienza from './components/pages/italiano/Accoglienza';
 
-
-
-
 function App() {
   return (
       <Router>
         {/* NAVBAR */}
         <NavBar />
-
         <Switch>
           <Route path="/" component={Accueil} exact>
             <Accueil />
@@ -39,7 +35,14 @@ function App() {
             <Accoglienza />
           </Route>
         </Switch>
+
+
+        {/* <Switch>
+          <Accueil />
+        </Switch> */}
       </Router>
+
+
 
 
   );
