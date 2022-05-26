@@ -9,6 +9,7 @@ import Accueil from './components/pages/français/Accueil';
 import Home from './components/pages/english/Home';
 import StartSeite from './components/pages/deutsch/StartSeite';
 import Accoglienza from './components/pages/italiano/Accoglienza';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             <Accoglienza />
           </Route>
         </Switch>
+        <Router>
+          <Footer />
+        </Router>
 
 
         {/* <Switch>
