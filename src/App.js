@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import NavBar from './components/navigation/NavBar';
+
 import Contact from './components/pages/contact/Contact';
 
 /* Importation des pages d'accueil */
@@ -23,68 +24,17 @@ import Tarifs from './components/pages/français/Tarifs';
 
 function App() {
   return (
-
-      <Router>
-        {/* NAVBAR */}
-        <NavBar />
-        <Switch>
-          <Route path="/" component={Accueil} exact>
-            <Accueil />
-          </Route>
-          <Route path="/contact" component={Contact} exact>
-            <Contact />
-          </Route>
-          <Route path="/" component={Accueil} exact>
-            <Accueil />
-          </Route>
-          <Route path="/home" component={Home} exact>
-            <Home />
-          </Route>
-          <Route path="/startseite" component={StartSeite} exact>
-            <StartSeite />
-          </Route>
-          <Route path="/accoglienza" component={Accoglienza} exact>
-            <Accoglienza />
-          </Route>
-        </Switch>
-
-       {/* PAGES PROFESSEUR */}
-       <Router>
-          <Route path="/professeur" component={Professeur} exact>
-            <Professeur />
-          </Route>
-          <Route path="/teacher" component={Teacher} exact>
-            <Teacher />
-          </Route>
-          <Route path="/lehrer" component={Lehrer} exact>
-            <Lehrer />
-          </Route>
-          <Route path="/professore" component={Professore} exact>
-            <Professore />
-          </Route>
-        </Router>
-
-        {/* PAGES PRICES */}
-        <Router>
-          <Route path="/tarifs" component={Tarifs}>
-            <Tarifs />
-          </Route>
-        </Router>
-
-        {/* FOOTER */}
-        <Router>
-          <Footer />
-        </Router>
-
-
-        {/* <Switch>
+    <div>
+      <NavBar />
+      <Switch>
+        <Route path="/contact" exact>
+          <Contact />
+        </Route>
+        <Route path="/" >
           <Accueil />
-        </Switch> */}
-      </Router>
-
-
-
-
+        </Route>
+      </Switch>
+    </div>
   );
 }
 

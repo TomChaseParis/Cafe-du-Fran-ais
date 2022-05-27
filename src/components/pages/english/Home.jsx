@@ -17,33 +17,6 @@ const Home = () => {
         DELF/DALF and TCF preparation
         Mini-group French classes (on demand)
      </p>
-
-      <ul className="home__country">
-
-        {/* FRANCE */}
-        <li className="home__country__item">
-          <a href="" className="home__country__links">Français</a>
-          <img src={picfrance} alt="drapeau français" />
-        </li>
-
-         {/* ENGLISH */}
-         <li className="home__country__item">
-          <a href="" className="home__country__links">English</a>
-          <img src={picenglish} alt="drapeau anglais" />
-        </li>
-
-          {/* DEUTSCH */}
-         <li className="home__country__item">
-          <a href="" className="home__country__links" >Deutsch</a>
-          <img src={picdeutsch} alt="drapeau allemand" />
-        </li>
-
-          {/* ITALIANOl */}
-         <li className="home__country__item">
-          <a href="" className="home__country__links">Italiano</a>
-          <img src={picitalia} alt="drapeau italien" />
-        </li>
-     </ul>
     </div>
   );
 };

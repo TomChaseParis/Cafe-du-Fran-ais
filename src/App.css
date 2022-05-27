@@ -7,3 +7,11 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+.ReactFlagsSelect-module_label__27pw9, .ReactFlagsSelect-module_secondaryLabel__37t1D {
+  display: none;
+}
+
+.ReactFlagsSelect-module_selectBtn__19wW7 {
+  border: none!important
+}
