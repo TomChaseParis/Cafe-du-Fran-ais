@@ -29,20 +29,20 @@ const NavBar = () => {
       <Menu.Item key='contact' icon={<ContactsOutlined />}>
         <NavLink to='/contact'>Contact</NavLink>
       </Menu.Item>
-      <Menu.Item key='about' icon={<UserOutlined />}>
+      <Menu.Item key='about' icon={<UserOutlined />} style={{ marginRight: '6rem' }}>
         <NavLink to='/about'>About</NavLink>
       </Menu.Item>
-      <Menu.Item>
+      <div style={{ position: 'absolute', right: '20px', top: '5px' }}>
         <ReactFlagsSelect
           placeholder=''
           selected={lng}
           onSelect={lng => dispatch(setLng(lng))}
           countries={['GB', 'FR', 'DE', 'IT']}
         />
-      </Menu.Item>
-      <Menu.Item>
+      </div>
+
           
-      </Menu.Item>
+
       <div style={{ position: 'absolute', right: '20px', top: '50px' }}>
       {
           isDark ? (
