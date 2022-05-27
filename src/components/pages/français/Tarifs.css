@@ -1,0 +1,22 @@
+.price {
+  display: flex;
+  padding: 70px 130px;
+  justify-content: center;
+
+}
+.price__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 40px;
+}
+
+.price__items {
+  width: 800px;
+}
+
+.price__picture {
+  width: 730px;
+  height: 470px;
+}

@@ -11,8 +11,19 @@ import StartSeite from './components/pages/deutsch/StartSeite';
 import Accoglienza from './components/pages/italiano/Accoglienza';
 import Footer from './components/footer/Footer';
 
+/* Pages Teacher */
+import Professeur from './components/pages/français/Professeur';
+import Teacher from './components/pages/english/Teacher';
+import Lehrer from './components/pages/deutsch/Lehrer';
+import Professore from './components/pages/italiano/Professore';
+
+
+/* Pages Prices */
+import Tarifs from './components/pages/français/Tarifs';
+
 function App() {
   return (
+
       <Router>
         {/* NAVBAR */}
         <NavBar />
@@ -26,7 +37,7 @@ function App() {
           <Route path="/" component={Accueil} exact>
             <Accueil />
           </Route>
-          <Route path="/english" component={Home} exact>
+          <Route path="/home" component={Home} exact>
             <Home />
           </Route>
           <Route path="/startseite" component={StartSeite} exact>
@@ -36,6 +47,31 @@ function App() {
             <Accoglienza />
           </Route>
         </Switch>
+
+       {/* PAGES PROFESSEUR */}
+       <Router>
+          <Route path="/professeur" component={Professeur} exact>
+            <Professeur />
+          </Route>
+          <Route path="/teacher" component={Teacher} exact>
+            <Teacher />
+          </Route>
+          <Route path="/lehrer" component={Lehrer} exact>
+            <Lehrer />
+          </Route>
+          <Route path="/professore" component={Professore} exact>
+            <Professore />
+          </Route>
+        </Router>
+
+        {/* PAGES PRICES */}
+        <Router>
+          <Route path="/tarifs" component={Tarifs}>
+            <Tarifs />
+          </Route>
+        </Router>
+
+        {/* FOOTER */}
         <Router>
           <Footer />
         </Router>

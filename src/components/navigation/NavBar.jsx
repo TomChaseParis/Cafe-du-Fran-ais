@@ -6,7 +6,6 @@ import Logo from '../../assets/img/logo.webp';
 
 // Importation des pages d'accueil
 
-
 const NavBar = () => {
 
   /* RESPONSIVE */

@@ -18,7 +18,6 @@ const Accueil = () => {
       <img className='home__pic' src={picheader} alt="photo de couverture" />
       <p className='home__para'>Cours de Français Langue Etrangère à la carte dans le 5ème arrondissement de Paris.</p>
 
-
       <ul className="home__country">
 
         {/* FRANCE */}
